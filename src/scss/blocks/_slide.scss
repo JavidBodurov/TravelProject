@@ -1,7 +1,3 @@
-@mixin background-clip {
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
 
 @mixin background-size {
     background-position: center center;
@@ -117,7 +113,19 @@
     }
 }
 
+
+@mixin background($color) {
+    background: linear-gradient(
+            47.06deg,
+            $color -3.87%,
+            rgba(255, 255, 255, 0) 20.89%),
+            #fff;
+}
+
+
 .slide__title {
+    display: inline-block;
+    padding: 0 10px;
     // font-size: 250px;
     font-size: 13vw;
     font-weight: 700;
@@ -127,60 +135,32 @@
         font-size: 19vw;
     }
 
-    span {
-        padding: 0 10px;
-        background: linear-gradient(
-            47.06deg,
-            #000 -3.87%,
-            rgba(255, 255, 255, 0) 20.89%),
-            #fff;
-        @include background-clip;
+
+    @include background(#000);
+
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+
+     &--norway {
+        @include background(#051d27);
     }
 
-    &--norway span {
-        background: linear-gradient(
-            47.06deg,
-            #051d27 -3.87%,
-            rgba(255, 255, 255, 0) 20.89%),
-            #fff;
-        @include background-clip;
+    &--austria {
+        @include background(#122127);   
     }
 
-    &--austria span {
-        background: linear-gradient(
-            47.06deg,
-            #122127 -3.87%,
-            rgba(255, 255, 255, 0) 20.89%),
-            #fff;
-        @include background-clip;
+    &--uae {
+            @include background(#aa6621);     
     }
 
-    &--uae span {
-        background: linear-gradient(
-            47.06deg,
-            #aa6621 -3.87%,
-            rgba(255, 255, 255, 0) 20.89%),
-            #fff;
-       @include background-clip;
-    }
-
-    &--thailand span {
-        background: linear-gradient(
-            47.06deg,
-            #2e7c88 -3.87%,
-            rgba(255, 255, 255, 0) 20.89%),
-            #fff;
-        @include background-clip;
+    &--thailand {
+        @include background(#2e7c88); 
     }
     
-    &--morocco span {
-        background: linear-gradient(
-            47.06deg,
-            #757575 -3.87%,
-            rgba(255, 255, 255, 0) 20.89%),
-            #fff;
-        @include background-clip;
+    &--morocco {
+        @include background(#757575);
     }
+
 }
 
 .slide__locations {
