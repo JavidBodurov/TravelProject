@@ -44,4 +44,5 @@ import mobileNav from './modules/mobile-nav.js';
 mobileNav();
 
 
-
+import loader from './modules/loader.js';
+loader();
