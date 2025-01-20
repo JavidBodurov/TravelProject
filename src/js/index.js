@@ -1,5 +1,4 @@
-// import mobileNav from './modules/mobile-nav.js';
-// mobileNav();
+
 
 
 // import Swiper bundle with all modules installed
@@ -37,6 +36,12 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-scrollbar',
   },
 });
+
+
+
+
+import mobileNav from './modules/mobile-nav.js';
+mobileNav();
 
 
 
